@@ -8,12 +8,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.*;
 
-public class keeperController {
     @Slf4j
     @Component("keeperKeeperController")
     @RestController
     @RequestMapping("/keeper/keeper")
-    public static class keeperController {
+    public class keeperController {
 
         @Autowired
         private KeeperMapper keeperMapper; //注入数据库处理类
@@ -92,4 +91,3 @@ public class keeperController {
             return keeper1.getStatus();
         }
     }
-}
